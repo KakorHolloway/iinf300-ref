@@ -67,8 +67,8 @@ A partir de l'image harbor.kakor.ovh/public/oc-helm:1.0 créez une pipeline Gith
 S'authentifier au cluster à partir d'un token généré à partir de l'interface graphique d'openshift ( https://console-openshift-console.apps.openshift.kakor.ovh ) :
 ```oc login ....```
 
-Puis déployez l'application avec helm en utilisant le sha du commit pour coller à la version de l'image :
-``` helm upgrade --install groupe-x librairie-helm/ --set image=<urlimage>:${{ github.sha }} ```
+Puis déployez l'application avec helm en utilisant le tag pour coller à la version de l'image :
+``` helm upgrade --install groupe-x librairie-helm/ --set image=<urlimage>:${{ github.ref_name }} ```
 
 ## Exercice 8
 

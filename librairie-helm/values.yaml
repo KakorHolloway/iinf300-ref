@@ -1,1 +1,2 @@
-Url: groupe-x.apps.openshift.kakor.ovh
+Url: correction.apps.openshift.kakor.ovh
+image: harbor.kakor.ovh/ipi/correction:v0.0.1
