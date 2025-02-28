@@ -88,4 +88,4 @@ jobs:
     steps:
       - name: Deploy helm
         run: |
-          docker run harbor.kakor.ovh/public/oc-helm:latest sh -c "oc login --token=${{ secrets.token }} --server=https://api.openshift.kakor.ovh:6443 && helm upgrade --install -n correction correction librairie-helm/ --set image=harbor.kakor.ovh/ipi/correction:${{ github.ref_name }}"
+          docker run harbor.kakor.ovh/public/oc-helm:latest sh -c "oc login --token=${{ secrets.token }} --insecure-skip-tls-verify --server=https://api.openshift.kakor.ovh:6443 && helm upgrade --install -n correction correction librairie-helm/ --set image=harbor.kakor.ovh/ipi/correction:${{ github.ref_name }}"
