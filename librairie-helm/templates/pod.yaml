@@ -9,4 +9,4 @@ spec:
   - name: python-container
     image: {{ .Values.image }}
     ports:
-    - containerPort: 
+    - containerPort: 5000
